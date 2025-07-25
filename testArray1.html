@@ -71,6 +71,22 @@
             console.log(event.currentTarget); // 事件參數的 currentTarget 相等於 this
             console.log(`${event.currentTarget.innerText} is ${[...lis].indexOf(event.currentTarget)}`);
         }
+
+        // includes() 存不存在
+        console.log(pokemons.includes("皮卡丘"));
+        console.log(pokemons.includes("小火龍"));
+
+        // find() / findIndex() / filter()
+        const numbers = [33, 44, 9, 6, 15, 19, 27, 55];
+        const result = numbers.find(function (age) {
+            if (age < 18) {
+                return true;
+            }
+            return undefined; // function 預設回傳 undefined
+        });
+        console.log(result);
+
+
     </script>
 </body>
 
