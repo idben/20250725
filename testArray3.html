@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>拓展運算子﹑剩餘參數和解構賦值</title>
+</head>
+
+<body>
+    <script>
+        // 拓展運算子的使用情境
+        const ary1 = [1, 2, 3];
+        const ary2 = [4, 5, 6];
+
+        console.log([...ary1]); // 攤平一個現有陣列在空陣列 = 陣列複製
+        console.log([...ary1, ...ary2]); // 攤平 2 個現有陣列在空陣列 = 陣列組合
+
+    </script>
+</body>
+
+</html>
