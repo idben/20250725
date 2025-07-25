@@ -13,6 +13,17 @@
         const ary2 = [1, 55, 38, 1034, 2, 0, 42, 99, 386];
         ary1.sort();
         ary2.sort(); // 沒有寫比較函數, 自然排序法, 或叫字典排序法
+
+        // return a-b 升冪
+        ary2.sort(function (a, b) {
+            return a - b;
+        });
+
+        // return b-a 降冪
+        ary2.sort(function (a, b) {
+            return b - a;
+        });
+
         console.log(ary1);
         console.log(ary2);
 
