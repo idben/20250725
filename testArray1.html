@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>陣列的迭代</title>
+</head>
+
+<body>
+
+    <script>
+        const pokemons = ['小火龍', '杰尼龜', '木木梟', '火球鼠', '水水獺', '新葉喵'];
+
+        // for
+        for (let i = 0; i < pokemons.length; i++) {
+            console.log(pokemons[i]);
+        }
+
+        //
+        pokemons.forEach(function (value, index, ary) {
+            console.log(value);
+            console.log(index);
+            console.log(ary);
+            console.log("---------");
+
+
+        });
+    </script>
+</body>
+
+</html>
