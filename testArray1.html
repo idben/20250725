@@ -78,13 +78,31 @@
 
         // find() / findIndex() / filter()
         const numbers = [33, 44, 9, 6, 15, 19, 27, 55];
+        /*
         const result = numbers.find(function (age) {
             if (age < 18) {
                 return true;
             }
             return undefined; // function 預設回傳 undefined
+            // 因為 return 會讓程式終止在該行, 所以條件達成就不會進行到 return undefined
+            // 所以上面其實已經是 if else 的變形寫法了
+        });
+        */
+
+        const result = numbers.find(function (age) {
+            return age < 18;
         });
         console.log(result);
+
+        const result2 = numbers.findIndex(function (age) {
+            return age < 18;
+        });
+        console.log(result2);
+
+        const result3 = numbers.filter(function (age) {
+            return age < 18;
+        });
+        console.log(result3);
 
 
     </script>
