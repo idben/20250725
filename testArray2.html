@@ -28,7 +28,7 @@
         console.log(ary2);
 
         // 複雜一點的資料型態
-        const date = [
+        const data = [
             { id: 1, date: "2025-07-25", name: "陳一", age: 18 },
             { id: 2, date: "1999-07-25", name: "龍五", age: 44 },
             { id: 3, date: "2022-07-25", name: "詹七", age: 22 },
@@ -38,6 +38,17 @@
             { id: 7, date: "2010-07-25", name: "李四", age: 11 },
             { id: 8, date: "2002-07-25", name: "王二", age: 55 }
         ];
+
+        data.sort(function (a, b) {
+            return b.age - a.age;
+        });
+
+        console.log(data);
+        console.log(data[0].id);
+        console.log(data[0].name);
+        console.log(data[1].age);
+
+
     </script>
 </body>
 
