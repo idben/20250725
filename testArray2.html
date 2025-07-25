@@ -43,6 +43,13 @@
             return b.age - a.age;
         });
 
+        // 日期要放進 new Date() 後轉成日期物件後, 才能比大小
+        // 日期物件可以比大比小, 可以相減, 但不能夠用等號來對比是否一樣
+        // 可以轉成日期字串用字串的比對方式來比較是否完全相等
+        data.sort(function (a, b) {
+            return new Date(b.date) - new Date(a.date);
+        });
+
         console.log(data);
         console.log(data[0].id);
         console.log(data[0].name);
