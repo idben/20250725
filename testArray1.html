@@ -44,19 +44,30 @@
         console.log(pokemons.indexOf("木木梟"));
         console.log(pokemons.lastIndexOf("木木梟"));
 
-        //
+        //   indexOf 的使用情境, 找到所有的 li 點了後顯示名稱及索引值
+        //   點了兩個 li 前面的li要往後面的li的後面插
+        //   前面或後面會需要索引值來判斷
         const lis = document.querySelectorAll("li");
         console.log(lis);
 
-        // Array.from()
-        // [...]
+        //   Array.from()
+        //   [...]
         lis.forEach(function (li) {
-            li.onclick = function () {
-                console.log(`${this.innerText} is ${[...lis].indexOf(this)}`);
-            }
+            // li 的滑鼠點擊事件設定成一個空的函數, 在函數內寫控制指令
+            // li.onclick = function () {
+            //     console.log(`${li.innerText} is ${[...lis].indexOf(li)}`);
+            // }
+            li.onclick = liOnclick;
         });
 
+        // function liOnclick() {
+        //     console.log(`${this.innerText} is ${[...lis].indexOf(this)}`);
+        // }
 
+        function liOnclick(event) {
+            console.log(event.currentTarget); // 相等於 this
+            console.log(`${event.currentTarget.innerText} is ${[...lis].indexOf(event.currentTarget)}`);
+        }
     </script>
 </body>
 
