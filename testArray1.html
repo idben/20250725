@@ -57,15 +57,18 @@
             // li.onclick = function () {
             //     console.log(`${li.innerText} is ${[...lis].indexOf(li)}`);
             // }
+            // li 只有在這裡有, 在外部指定的 function 中沒有
             li.onclick = liOnclick;
         });
 
+        // 因為沒有 li 用了, 所以用 this
         // function liOnclick() {
         //     console.log(`${this.innerText} is ${[...lis].indexOf(this)}`);
         // }
 
+        // 事件指定的 function 必定會帶進一個事件參數
         function liOnclick(event) {
-            console.log(event.currentTarget); // 相等於 this
+            console.log(event.currentTarget); // 事件參數的 currentTarget 相等於 this
             console.log(`${event.currentTarget.innerText} is ${[...lis].indexOf(event.currentTarget)}`);
         }
     </script>
