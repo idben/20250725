@@ -8,6 +8,16 @@
 </head>
 
 <body>
+    <!-- ul>li*7>{選項$} -->
+    <ul>
+        <li>選項1</li>
+        <li>選項2</li>
+        <li>選項3</li>
+        <li>選項4</li>
+        <li>選項5</li>
+        <li>選項6</li>
+        <li>選項7</li>
+    </ul>
 
     <script>
         const pokemons = ['小火龍', '杰尼龜', '木木梟', '火球鼠', '水水獺', '新葉喵'];
@@ -16,8 +26,9 @@
         for (let i = 0; i < pokemons.length; i++) {
             console.log(pokemons[i]);
         }
+        console.log("---------");
 
-        //
+        // forEach
         pokemons.forEach(function (value, index, ary) {
             // if (value == "木木梟") {
             //     continue; // 陣列專屬的迴圈不支援終止或跳過
@@ -27,6 +38,12 @@
             // console.log(ary);
             // console.log("---------");
         });
+        console.log("---------");
+
+        // indexOf() / lastIndexOf()
+        console.log(pokemons.indexOf("木木梟"));
+        console.log(pokemons.lastIndexOf("木木梟"));
+
     </script>
 </body>
 
