@@ -48,9 +48,11 @@
         const lis = document.querySelectorAll("li");
         console.log(lis);
 
+        // Array.from()
+        // [...]
         lis.forEach(function (li) {
             li.onclick = function () {
-                console.log(`${this.innerText} is `);
+                console.log(`${this.innerText} is ${[...lis].indexOf(this)}`);
             }
         });
 
