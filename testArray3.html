@@ -21,17 +21,14 @@
         console.log(sum(...ary1));
 
 
-        // const r1 = ary2.filter(function (num) {
-        //     return num % 2 == 1
-        // });
-
+        // 剩餘參數的使用情境
         console.log(getOdd(2, 3, 4, 5, 6));
         console.log(getOdd(2, 3, 4, 5, 6, 7, 8, 9, 10));
 
         // 在 function 中的參數的最後一個加上 ...
         // 會把參數打包集合在 ... 後的名詞的變數, 以陣列方式存在
         // 適合處理傳入參數不固定的情況
-        function getOdd(...nums) {
+        function getOdd(n1, n2, ...nums) {
             return nums.filter(function (num) {
                 return num % 2 == 1
             });
